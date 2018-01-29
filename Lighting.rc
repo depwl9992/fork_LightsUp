@@ -1,0 +1,619 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Lighting.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Lighting.ico"
+IDR_LIGHTITYPE          ICON    DISCARDABLE     "res\\LightingDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_CURVE_EDITOR        BITMAP  DISCARDABLE     "res\\curve_ed.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_VIEW_SCENE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&New Cue After\tInsert",      ID_CUE_NEW
+        MENUITEM "New Cue &Before\tShift+Insert", ID_CUE_INSERT
+        MENUITEM "&Delete Cue\tDel",            ID_CUE_DEL
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Scene &Control",              ID_VIEW_SCENE
+    END
+    POPUP "&DMX"
+    BEGIN
+        MENUITEM "&Connect",                    ID_CONNECT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Lights Up!...",        ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_CUE_NEW,             VIRTKEY, NOINVERT
+    VK_INSERT,      ID_CUE_INSERT,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 73
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Lighting"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Lights Up!  Version 1.1",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright © 2002, 2004, 2011  Terry Wells\nhttp://www.terbos.com/",
+                    IDC_STATIC,40,26,174,17
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "Special thanks to Mike Neary for being my mentor in tech theater since 1980.",
+                    IDC_STATIC,40,48,141,18
+END
+
+IDD_LIGHTING_FORM DIALOG DISCARDABLE  0, 0, 203, 215
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_CUE_LIST,7,28,189,92,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_ACTIVE_CUE,50,132,112,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FADE_TIME,168,123,28,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PREVIEW_CUE,50,151,112,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FADE_TIME_PREVIEW,168,142,28,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Fade to Next Cue\n(Space)",IDC_NEXT_CUE,23,177,74,31,
+                    BS_MULTILINE
+    PUSHBUTTON      "Fade to Prev Cue\n(BkSp)",IDC_PREV_CUE,109,177,39,31,
+                    BS_MULTILINE
+    PUSHBUTTON      "Stop Fade (ESC)",IDC_FADE_CANCEL,162,177,34,31,
+                    BS_MULTILINE | WS_DISABLED | NOT WS_TABSTOP
+    CONTROL         "Progress1",IDC_FADE_PROGRESS,"msctls_progress32",
+                    WS_BORDER,23,169,74,8
+    CONTROL         "DMX Connect",IDC_CONNECT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE,141,7,55,15
+    RTEXT           "Active: ",IDC_STATIC,7,132,43,12,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    RTEXT           "Preview: ",IDC_STATIC,7,151,43,12,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    CONTROL         "DMX Freeze",IDC_DMX_FREEZE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE,7,7,53,15
+    LTEXT           "Static",IDC_FROZEN_CUE_TEXT,64,7,69,15,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+END
+
+IDD_SCENE_DLG DIALOG DISCARDABLE  0, 0, 219, 109
+STYLE DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Scene Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Slider Space",IDC_SLIDER_SPACE,16,45,196,57,NOT 
+                    WS_VISIBLE | WS_BORDER
+    PUSHBUTTON      "Edit Channel Map",IDC_EDIT_CHANNEL_MAP,7,7,73,14
+    PUSHBUTTON      "Edit Curves",IDC_EDIT_CURVES,92,7,73,14
+    LTEXT           "Look:",IDC_STATIC,7,26,19,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_LOOK_LIST,29,26,143,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Set",IDC_LOOK_SET,174,26,21,12
+    PUSHBUTTON      "X",IDC_LOOK_DEL,198,26,14,12
+END
+
+IDD_MAP_EDITOR DIALOG DISCARDABLE  0, 0, 308, 246
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Channel Map Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,198,225,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,251,225,50,14
+    CONTROL         "List3",IDC_CHANNEL_MAP,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,7,294,194
+    PUSHBUTTON      "Clear All",IDC_MAP_CLEAR_ALL,7,225,51,14
+    PUSHBUTTON      "1:1",IDC_MAP_IDENTITY,63,225,50,14
+    EDITTEXT        IDC_MAP_CHANNEL,7,201,54,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAP_ADDRESSES,61,201,240,14,ES_AUTOHSCROLL
+END
+
+IDD_CURVE_EDITOR DIALOG DISCARDABLE  0, 0, 227, 127
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Curve Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,115,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,106,50,14
+    EDITTEXT        IDC_LAMP_ADDR,47,7,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_LAMP_ADDR_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,82,7,11,
+                    14
+    COMBOBOX        IDC_LAMP_TYPE,7,24,61,73,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Set",IDC_LAMP_TYPE_SET,68,24,22,12
+    CONTROL         "Slider1",IDC_MIN_SLIDER,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,14,39,20,62
+    CONTROL         "Slider1",IDC_CURVE_SLIDER,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,42,39,25,62
+    CONTROL         "Slider1",IDC_MAX_SLIDER,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,68,39,21,62
+    CONTROL         136,IDC_CURVE_GRAPH,"Static",SS_BITMAP | SS_SUNKEN,108,7,
+                    112,94
+    LTEXT           "DMX Addr: ",IDC_STATIC,7,7,38,14,SS_CENTERIMAGE
+    CTEXT           "Min",IDC_STATIC,14,101,20,8
+    CTEXT           "Curve",IDC_STATIC,41,101,23,8
+    CTEXT           "Max",IDC_STATIC,68,101,20,8
+    PUSHBUTTON      "X",IDC_LAMP_TYPE_DEL,92,24,14,12
+END
+
+IDD_NEW_LAMP_TYPE DIALOG DISCARDABLE  0, 0, 186, 49
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add new lamp type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,7,50,14
+    LTEXT           "Save the current curve settings as a Lamp Type named:",
+                    IDC_STATIC,7,7,102,17
+    COMBOBOX        IDC_LAMP_TYPE_NAMES,7,29,117,62,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_LAMP_TYPE_DEL DIALOG DISCARDABLE  0, 0, 163, 49
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Delete lamp type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,106,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,106,7,50,14
+    LTEXT           "Remove the selected lamp type from the list:",
+                    IDC_STATIC,7,7,97,20
+    COMBOBOX        IDC_LAMP_TYPE_NAMES,7,30,93,65,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_LOOK_EDIT DIALOG DISCARDABLE  0, 0, 186, 49
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Look Edit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,7,50,14
+    LTEXT           "Prompt",IDC_LOOK_PROMPT,7,7,112,19
+    COMBOBOX        IDC_LOOK_LIST,7,30,113,64,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Lighting MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Lighting\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Lighting.EXE\0"
+            VALUE "ProductName", "Lighting Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        VERTGUIDE, 40
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_LIGHTING_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        VERTGUIDE, 50
+        VERTGUIDE, 97
+        VERTGUIDE, 162
+        VERTGUIDE, 168
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+        HORZGUIDE, 132
+        HORZGUIDE, 151
+        HORZGUIDE, 177
+    END
+
+    IDD_SCENE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+        HORZGUIDE, 26
+    END
+
+    IDD_MAP_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        VERTGUIDE, 61
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+        HORZGUIDE, 201
+    END
+
+    IDD_CURVE_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        VERTGUIDE, 34
+        VERTGUIDE, 68
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+        HORZGUIDE, 24
+        HORZGUIDE, 39
+        HORZGUIDE, 101
+    END
+
+    IDD_NEW_LAMP_TYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_LAMP_TYPE_DEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_LOOK_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CURVE_EDITOR DLGINIT
+BEGIN
+    IDC_LAMP_TYPE, 0x403, 8, 0
+0x6f4e, 0x696d, 0x616e, 0x006c, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Cue List - Lights Up!\n\nLights\nLights Up! Files (*.sho)\n.sho\nLightsUp.Document\nLights Up! Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Lights Up!"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_SCENE           "Show or Hide the Scene Control Panel\nToggle Scene"
+    ID_CONNECT              "Toggle Connection with OpenDMX device\nConnect/Disconnect"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Lighting.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

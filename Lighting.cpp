@@ -1,3 +1,7 @@
+// Original author: Terry Wells
+// Original project: https://sourceforge.net/projects/lightsup/
+// Forked on Jan 29, 2018 by Daniel Powell
+
 // Lighting.cpp : Defines the class behaviors for the application.
 //
 

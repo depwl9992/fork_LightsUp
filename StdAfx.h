@@ -1,3 +1,7 @@
+// Original author: Terry Wells
+// Original project: https://sourceforge.net/projects/lightsup/
+// Forked on Jan 29, 2018 by Daniel Powell
+
 // stdafx.h : include file for standard system include files,
 //  or project specific include files that are used frequently, but
 //      are changed infrequently

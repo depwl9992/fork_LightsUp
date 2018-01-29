@@ -1,3 +1,7 @@
+// Original author: Terry Wells
+// Original project: https://sourceforge.net/projects/lightsup/
+// Forked on Jan 29, 2018 by Daniel Powell
+
 #if !defined(AFX_DELLAMPTYPE_H__6E950819_EBEA_40DB_91C0_CA5D564A9624__INCLUDED_)
 #define AFX_DELLAMPTYPE_H__6E950819_EBEA_40DB_91C0_CA5D564A9624__INCLUDED_
 

@@ -1,3 +1,7 @@
+// Original author: Terry Wells
+// Original project: https://sourceforge.net/projects/lightsup/
+// Forked on Jan 29, 2018 by Daniel Powell
+
 #if !defined(AFX_LOOKEDIT_H__9F00BD3D_CE49_4B0B_A7BE_7CA32494C8DB__INCLUDED_)
 #define AFX_LOOKEDIT_H__9F00BD3D_CE49_4B0B_A7BE_7CA32494C8DB__INCLUDED_
 

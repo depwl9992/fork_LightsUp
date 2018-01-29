@@ -1,3 +1,7 @@
+// Original author: Terry Wells
+// Original project: https://sourceforge.net/projects/lightsup/
+// Forked on Jan 29, 2018 by Daniel Powell
+
 #if !defined(AFX_SCENEDLG_H__E6818B87_44C3_4DF3_BE94_499274292816__INCLUDED_)
 #define AFX_SCENEDLG_H__E6818B87_44C3_4DF3_BE94_499274292816__INCLUDED_
 

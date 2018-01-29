@@ -1,3 +1,7 @@
+// Original author: Terry Wells
+// Original project: https://sourceforge.net/projects/lightsup/
+// Forked on Jan 29, 2018 by Daniel Powell
+
 #if !defined(AFX_CURVEEDITOR_H__059DD60A_BB09_461E_A808_A36221005841__INCLUDED_)
 #define AFX_CURVEEDITOR_H__059DD60A_BB09_461E_A808_A36221005841__INCLUDED_
 

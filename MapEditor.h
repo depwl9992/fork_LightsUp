@@ -1,3 +1,7 @@
+// Original author: Terry Wells
+// Original project: https://sourceforge.net/projects/lightsup/
+// Forked on Jan 29, 2018 by Daniel Powell
+
 #if !defined(AFX_MAPEDITOR_H__5EC75197_68B2_4231_8457_3021237CBE07__INCLUDED_)
 #define AFX_MAPEDITOR_H__5EC75197_68B2_4231_8457_3021237CBE07__INCLUDED_
 

@@ -1,3 +1,7 @@
+// Original author: Terry Wells
+// Original project: https://sourceforge.net/projects/lightsup/
+// Forked on Jan 29, 2018 by Daniel Powell
+
 #if !defined(AFX_NEWLAMPTYPE_H__7DC110EF_17E5_4A17_88D5_6976A52C1D01__INCLUDED_)
 #define AFX_NEWLAMPTYPE_H__7DC110EF_17E5_4A17_88D5_6976A52C1D01__INCLUDED_
 

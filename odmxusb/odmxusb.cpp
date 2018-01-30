@@ -127,6 +127,7 @@ void Open_USB_DMX::close_dmx_devices()
 
 void Open_USB_DMX::send_dmx_packet(unsigned char* data)
 {
+    // Public-facing data frame parser. Called exclusively by CLightingView::ShowScene()
 	memcpy(m_DMXData_frame, data, 512);
 }
 
@@ -137,7 +138,8 @@ DWORD WINAPI Open_USB_DMX::OutputDataThread(LPVOID lParam)
 	SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_TIME_CRITICAL);
 	oud->m_killThread = false; // flag used to stop the thread
 	while (!oud->m_killThread) { // run until "kill" flag is set
-		oud->SendDataToHardware(0);
+        // Run every 30ms for keepalive. Send to Universe 0 only.
+		oud->SendDataToHardware(0); 
 		Sleep(30);
 	}
 
@@ -151,8 +153,14 @@ void Open_USB_DMX::SendDataToHardware(int universe)
 	FT_SetBreakOn(ftHandle);
     FT_SetBreakOff(ftHandle);
 
+    // Select universe with 1-byte StartCode.
 	unsigned char StartCode = universe;
 	FT_Write(ftHandle, &StartCode, 1, &bytesWritten);
+    
+    // We repeatedly send the same data packet every 30 ms to refresh the bus.
+    // If communications are lost (data packet is not refreshed to the bus every 50ms), 
+    // properly designed DMX slave devices are supposed to reset.
 	FT_Write(ftHandle, m_DMXData_frame, 512, &bytesWritten);
+    
 }
 
